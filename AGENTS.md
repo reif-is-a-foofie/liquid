@@ -105,6 +105,14 @@ Only introduce new top-level folders after confirming they do not duplicate exis
 5. Update documentation (`README.md`, `docs/`) when workflows or env vars change.
 6. Keep commit scope tight; avoid unrelated refactors.
 
+## Autonomous Planning & Coordination
+
+- Treat `docs/roadmap.md` as the living backlog; before starting work, identify the next unchecked task in the highest-priority milestone.
+- For each task (or tight grouping), open a GitHub issue using the Agent Task template (add it under `.github/ISSUE_TEMPLATE/` if missing) and link back to the roadmap checklist item.
+- Move issues across the shared GitHub Project board (`Backlog → Ready → In Progress → Review → Done`) to broadcast status without human intervention.
+- Update the roadmap checkboxes as tasks ship; note scope changes directly in the document and cross-link the issue/pr for traceability.
+- Surface blockers by commenting on the relevant issue with context, proposed fixes, and dependencies; escalate only when human input is required.
+
 ## File Ownership & Nested Instructions
 
 - This `AGENTS.md` applies to the entire repository. If you create subdirectories with specialized processes (e.g., `infra/`, `docs/`), add another `AGENTS.md` within that folder for overrides. The most specific file always wins.

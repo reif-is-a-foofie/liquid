@@ -1,0 +1,46 @@
+name: Agent Task
+description: Plan and execute an autonomous Liquid Gold deliverable.
+title: "[Task] "
+labels:
+  - backlog
+  - agent
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Overview
+        Provide enough context for any agent to pick up this task, execute it end-to-end, and report back without additional prompting.
+  - type: textarea
+    id: context
+    attributes:
+      label: Context & Links
+      description: Why this task exists, related roadmap items, supporting docs, or existing code to review.
+      placeholder: "Roadmap: Milestone 1 – Backend Foundation\nLinked PRs/Issues: #12"
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: Bullet checklist describing done-state. Agents tick these off before closing the issue.
+      placeholder: "- [ ] Alembic migration creates wallets table\n- [ ] pytest passes"
+    validations:
+      required: true
+  - type: textarea
+    id: prompt_seed
+    attributes:
+      label: Cursor Prompt Seed
+      description: Starting prompt for Cursor to scaffold; agents can adapt as they work.
+      placeholder: "Create FastAPI route for converting USD to PAXG via Coinbase sandbox API..."
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation & Commands
+      description: Commands/tests agents must run before marking complete.
+      placeholder: "cd backend && uv run pytest"
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes / Blockers / Dependencies
+      description: Capture anything that might require human input or coordination with other tasks.
+      placeholder: "Blocked on API keys arriving Friday"
