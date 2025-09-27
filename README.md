@@ -1,4 +1,4 @@
-# Cursor Development Rules – Liquid Gold
+# Cursor Development Rules – Liquid
 
 ## Purpose
 
